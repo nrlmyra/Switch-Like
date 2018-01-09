@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>About to reach minimum</title>
+</head>
+<style>
+    #title{
+        padding-top:50px;
+        padding-bottom:50px;
+        font-weight:bold;
+    }
+    .jumbotron {
+        background-image: url('static/images/paradise6.jpg');
+        background-size: 100%;
+        font-size: 30px;
+        font-weight:bold;
+    }
+    body {
+        color: #fffee2;
+    }
+    table{
+        font-size: 20px;
+        margin-left: 200px;
+        border:1px solid black;
+    }
+    .highlight{
+        color: #3d31c6;
+        text-decoration: underline;
+    }
+    .acc{
+        font-weight:bold;
+        margin-left:250px;
+    }
+    h3{
+        margin-left:100px;
+    }
+    .highlight{
+        padding:20px;
+        text-align:center;
+    }
+    td{
+        padding:20px;
+        text-align:center;
+    }
+    #top{
+        font-weight:bold;
+        text-decoration:underline ;
+    }
+    .about{
+        text-decoration: underline;
+    }
+
+</style>
+<body>
+
+{% extends 'layout.html' %}
+{% block body %}
+    <div class="jumbotron text-center" id="title">
+        <h2>Account that about to reach minimum amount</h2>
+    </div>
+
+    <h3>Account that about to reach minimum amount:
+        <select>
+            <option>4827-6252-1341</option>
+            <option>5362-8256-3427</option>
+        </select>
+    </h3>
+    <h3>Amount currently: <span style="color:red;font-weight:bold;">$434.00</span></h3>
+    <h3>Minimum amount: <span style="color:green;font-weight:bold;">$300.00</h3>
+    <h3 id="top">Amount to top-up from:</h3>
+    <table border="1">
+    <tr><th class="highlight">Bank</th><th class="highlight">Account Number</th><th class="highlight">Account Name</th><th class="highlight">Balance</th><th class="highlight">Minimum Amount</th><th class="highlight">Select</th></tr>
+    <tr><td>UOB</td><td>1234-5678-1111</td><td>Savings</td><td>SGD1534.00</td><td>$1000.00</td><td><input type="checkbox"></td></tr>
+    <tr><td>OCBC</td><td>6237-2366-7355</td><td>Current</td><td>SGD705.50</td><td>-</td><td><input type="checkbox"></td></tr>
+        <tr><td>HSBC</td><td>4773-2384-8475</td><td>Savings</td><td><span style="text-decoration: underline;font-weight: bold;"><a href="about2">SGD636.30</a></span>
+        <div>
+            <span style="font-size:15px;"><p><span style="color:red">$136.00 before reached minimum</span></p></span>
+        </div>
+        </td><td>$500.00</td><td><input type="checkbox"></td></tr>
+    </table>
+
+    <h3>Amount to top up from:</h3>
+    <h3 class="acc"><span style="color:#3d31c6">1234-5678-1111:</span> SGD <input type="text" size="3" placeholder="00.00"></h3>
+    <h3 class="acc"><span style="color:#3d31c6">6237-2366-7355:</span> SGD <input type="text" size="3" placeholder="00.00"></h3>
+    <h3 class="acc"><span style="color:#3d31c6">4773-2384-8475:</span> SGD <input type="text" size="3" placeholder="00.00"></h3>
+    <button type="button" class="btn btn-success pull-right">Confirm</button>
+{% endblock %}
+
+</body>
+</html>
